@@ -1,5 +1,7 @@
 module.exports = function( grunt ) {
   'use strict';
+
+  grunt.loadNpmTasks('grunt-ember-templates');
   //
   // Grunt configuration:
   //
@@ -23,6 +25,19 @@ module.exports = function( grunt ) {
         },
         options: {
           basePath: 'app/scripts'
+        }
+      }
+    },
+
+    ember_templates: {
+      compile:{
+        options: {
+          templateName: function(sourceFile){
+            return sourceFile.replace(/path\/to\//, '');
+          }
+        },
+        files: {
+          'result.js' : ['app/scripts/templates/**/*.handlebars'],
         }
       }
     },
@@ -185,5 +200,8 @@ module.exports = function( grunt ) {
 
   // Alias the `test` task to run the `mocha` task instead
   grunt.registerTask('test', 'server:phantom mocha');
+
+  // Define the `handlebars` task.
+  grunt.registerTask('handlebars', ['ember_templates']);
 
 };

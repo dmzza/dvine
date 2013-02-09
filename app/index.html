@@ -15,20 +15,11 @@
         
         <link rel="stylesheet" href="styles/main.css">
         <script src="scripts/vendor/modernizr.min.js"></script>
+
+        
     </head>
     <body>
-    <div class="container" style="margin-top:50px">
-        <div class="hero-unit">
-            <h1>Wotcha!</h1>
-            <p>You now have</p>
-            <ul>
-                <li>HTML5 Boilerplate</li>
-                <li>Twitter Bootstrap</li>
-                <li>Twitter Bootstrap plugins</li>
-            </ul>
-            <p>installed.</p>
-            <h3>Enjoy coding! - Yeoman</h3>
-        </div>
+    <div class="container">
     </div>
 
         <!--[if lt IE 7]>
@@ -51,6 +42,11 @@
         </script>
     
     <!-- build:js scripts/plugins.js -->
+    <script src="scripts/vendor/handlebars-1.0.rc.2.js"></script>
+    <!-- <script src="scripts/vendor/handlebars.runtime.js"></script> -->
+    <script src="scripts/vendor/emblem.js"></script>
+    <script src="scripts/vendor/ember.js"></script>
+    <script src="scripts/vendor/ember-data.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-affix.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-alert.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-dropdown.js"></script>
@@ -64,6 +60,17 @@
     <script src="scripts/vendor/bootstrap/bootstrap-scrollspy.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-collapse.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-tab.js"></script>
+    <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+
+    <script type="text/x-handlebars" data-template-name="application">
+      {{outlet}}
+    </script>
+    <script type="text/x-handlebars" data-template-name="index">
+      <h1>DEVINE</h1>
+      <video autoplay loop preload="auto" src="https://vines.s3.amazonaws.com/videos/F4E173F6-D2A8-4E0B-BB48-375935328E42-2029-0000021FF3658FF6_1.0.1.mp4?versionId=r8yLrM.UFLKe9flNhOvRHE9OyH95_kqC"></video>
+    </script>
+
 </body>
 </html>

@@ -1,1 +1,14 @@
 @import "compass_twitter_bootstrap";
+
+::selection {
+	background: #E01B6A; /* Safari */
+	color:white;
+	}
+::-moz-selection {
+	background: #E01B6A; /* Firefox */
+	color:white;
+}
+
+video {
+	height:612px;
+}

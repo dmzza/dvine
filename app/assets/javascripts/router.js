@@ -1,3 +1,5 @@
 Vine.Router.map(function() {
-  this.route("hello");
+  this.resource('videos', { path: '/' }, function() {
+    this.route('index');
+  });
 });

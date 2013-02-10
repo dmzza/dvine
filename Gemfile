@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'rails-api'
 
-gem 'sqlite3'
+gem 'pg'
 
 gem 'jquery-rails'
 gem 'ember-rails', :git => "git://github.com/emberjs/ember-rails.git", :ref => "587a5"

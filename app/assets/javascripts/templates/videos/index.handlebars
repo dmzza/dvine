@@ -1,4 +1,15 @@
-<div>{{#linkTo videos.new}}Add a Vine{{/linkTo}}</div>
-{{#each controller}}
-	<video autoplay loop preload="auto" {{bindAttr src="this.url"}}></video>
+<div class="header">
+	<h1>DVINE</h1>
+	<div class="add">{{#linkTo videos.new}}Add a Vine{{/linkTo}}</div>
+</div>
+{{#each video in content}}
+	{{#view Vine.VideoView}}
+	<div class="video">
+		<video loop preload="auto" {{bindAttr src="video.url"}}></video>
+		
+		<div class="tags">
+			#winter #blizzard #snow #2013
+		</div>
+	</div>
+	{{/view}}
 {{/each}}

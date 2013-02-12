@@ -1,0 +1,61 @@
+body {
+	font-family: "proxima-nova", sans-serif;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	width: 480px;
+	position: relative;
+	left: 50%;
+	margin-left: -240px;
+}
+
+h1 {
+	font-family: "proxima-nova", sans-serif;
+	font-weight: 800;
+	font-size: 4em;
+	float: left;
+}
+
+.add {
+	float: right;
+	line-height: 10em;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(40,125,217);
+}
+
+
+
+.video {
+	
+	margin: 40px 0;
+	padding-bottom: 35px;
+	border-bottom: 1px solid #CCC;
+	width: 100%;
+}
+
+.tags {
+	padding: 10px;
+	top:-5px;
+	position: relative;
+	background-color: #EEE;
+	width: 460px;
+	left: 50%;
+	margin-left: -240px;
+	
+}
+
+video {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	position: relative;
+	left: 50%;
+	margin-left: -240px;
+}

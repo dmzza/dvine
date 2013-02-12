@@ -1,13 +1,20 @@
 class VideosController < ActionController::API
 	
-	# GET /listings.json
+	# GET /videos.json
   def index
     @videos = Video.find(:all)
 
     render json: @videos
   end
 
-	# POST /leads.json
+  # GET /videos/1.json
+  def show
+    @video = Video.find(params[:id])
+    
+    render json: @video
+  end
+
+	# POST /videos.json
   def create
     @video = Video.new(params[:video])
 

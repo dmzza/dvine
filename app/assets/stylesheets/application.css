@@ -5,11 +5,15 @@ body {
 	margin: 0;
 }
 
-.header {
+.centered {
 	width: 480px;
 	position: relative;
 	left: 50%;
 	margin-left: -240px;
+}
+
+.header {
+	
 }
 
 h1 {
@@ -34,7 +38,6 @@ a:hover {
 
 
 .video {
-	
 	margin: 40px 0;
 	padding-bottom: 35px;
 	border-bottom: 1px solid #CCC;
@@ -44,18 +47,21 @@ a:hover {
 .tags {
 	padding: 10px;
 	top:-5px;
-	position: relative;
 	background-color: #EEE;
 	width: 460px;
-	left: 50%;
-	margin-left: -240px;
 	
+}
+.tags img {
+	position: absolute;
+	right: 5px;
+	bottom: 7px;
 }
 
 video {
 	margin-bottom: 0;
 	padding-bottom: 0;
-	position: relative;
-	left: 50%;
-	margin-left: -240px;
+}
+
+form {
+	clear: both;
 }

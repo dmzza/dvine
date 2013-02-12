@@ -1,14 +1,11 @@
-<div class="header">
-	<h1>DVINE</h1>
-	<div class="add">{{#linkTo videos.new}}Add a Vine{{/linkTo}}</div>
-</div>
 {{#each video in content}}
-	{{#view Vine.VideoView}}
+	{{#view Vine.VideoBoxView}}
 	<div class="video">
-		<video loop preload="auto" {{bindAttr src="video.url"}}></video>
+		<video loop preload="auto" class="centered" {{bindAttr src="video.url"}}></video>
 		
-		<div class="tags">
+		<div class="centered tags">
 			#winter #blizzard #snow #2013
+			{{#linkTo "video" video}}<img src="assets/glyphicons_220_play_button.png" />{{/linkTo}}
 		</div>
 	</div>
 	{{/view}}

@@ -1,4 +1,4 @@
-Vine.VideoView = Ember.View.extend({
+Vine.VideoBoxView = Ember.View.extend({
 	mouseEnter: function(e) {
 		videos = document.getElementsByTagName("video");
 		$.each(videos, function(i, v) {
@@ -13,4 +13,4 @@ Vine.VideoView = Ember.View.extend({
 		});
 		this.$("video")[0].play();
 	}
-})
+});

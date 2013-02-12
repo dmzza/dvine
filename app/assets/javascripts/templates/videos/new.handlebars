@@ -1,6 +1,7 @@
-<h1>Add a Vine</h1>
 
-Video URL: {{view Ember.TextField valueBinding="url"}}
+<form class="centered">
+	<label>Video URL:</label> {{view Ember.TextField valueBinding="url"}}
 
-<button class="btn btn-success" {{action save content}}>Add</button>
-<button class="btn" {{action cancel}}>Cancel</button>
+	<button class="btn btn-success" {{action save content}}>Add</button>
+	<button class="btn" {{action cancel}}>Cancel</button>
+</form>

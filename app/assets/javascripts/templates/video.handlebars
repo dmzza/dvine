@@ -3,8 +3,9 @@
 		<video loop preload="auto" class="centered" {{bindAttr src="url"}}></video>
 		
 		<div class="centered tags">
-			#winter #blizzard #snow #2013
-			
+			{{#each tag in video.tags}}
+				{{tag.name}}
+			{{/each}}
 		</div>
 	</div>
 {{/view}}

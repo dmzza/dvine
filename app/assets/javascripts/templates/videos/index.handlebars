@@ -1,12 +1,1 @@
-{{#each video in content}}
-	{{#view Vine.VideoBoxView}}
-	<div class="video">
-		<video loop preload="auto" class="centered" {{bindAttr src="video.url"}}></video>
-		
-		<div class="centered tags">
-			#winter #blizzard #snow #2013
-			{{#linkTo "video" video}}<img src="assets/glyphicons_220_play_button.png" />{{/linkTo}}
-		</div>
-	</div>
-	{{/view}}
-{{/each}}
+{{partial "videos"}}

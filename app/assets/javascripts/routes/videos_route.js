@@ -24,3 +24,24 @@ Vine.VideosNewRoute = Ember.Route.extend({
 		}
 	}
 });
+
+Vine.VideosTagRoute = Ember.Route.extend({
+	model: function(params) {
+		this.set('tag', params.name);
+		videos = Vine.Video.find();
+
+		return videos.filter(function(video, i, list) {
+				caption = video.get('caption')
+				if(caption != null && caption.indexOf('#' + params.name) != -1) {
+					return true;
+				} else {
+					return false;
+				}
+				
+			});
+	},
+	setupController: function(controller, model) {
+		controller.set('content', model);
+		controller.set('tag', this.get('tag'));
+	}
+});

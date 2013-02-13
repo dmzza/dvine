@@ -1,0 +1,14 @@
+{{#each video in content}}
+	{{#view Vine.VideoBoxView}}
+	<div class="video">
+		<video loop preload="auto" class="centered" {{bindAttr src="video.url"}}></video>
+		
+		<div class="centered tags">
+			{{#each tag in video.tags}}
+				<a href="{{unbound tag}}"> {{tag}} </a>
+			{{/each}}
+			{{#linkTo "video" video}}<img src="assets/glyphicons_220_play_button.png" />{{/linkTo}}
+		</div>
+	</div>
+	{{/view}}
+{{/each}}

@@ -1,6 +1,7 @@
 
 <form class="centered">
-	<label>Video URL:</label> {{view Ember.TextField valueBinding="url"}}
+	<label>Video URL: {{view Ember.TextField valueBinding="url"}}</label>
+	<label>Caption: {{view Ember.TextField valueBinding="caption"}}</label>
 
 	<button class="btn btn-success" {{action save content}}>Add</button>
 	<button class="btn" {{action cancel}}>Cancel</button>

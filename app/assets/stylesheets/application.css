@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-	
+
 }
 
 h1 {
@@ -21,6 +21,14 @@ h1 {
 	font-weight: 800;
 	font-size: 4em;
 	float: left;
+}
+
+h1 a {
+	color: black;
+}
+
+h2 {
+	clear: both;
 }
 
 .add {
@@ -60,8 +68,13 @@ a:hover {
 video {
 	margin-bottom: 0;
 	padding-bottom: 0;
+	height: 480px;
+	background: black;
 }
 
 form {
 	clear: both;
+}
+label {
+	display: block;
 }

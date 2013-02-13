@@ -12,6 +12,12 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'ember-rails', :git => "git://github.com/emberjs/ember-rails.git", :ref => "587a5"
 
+group :assets do
+  gem 'therubyracer'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

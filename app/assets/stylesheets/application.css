@@ -91,6 +91,7 @@ video {
 	padding-bottom: 0;
 	height: 480px;
 	background: black;
+	clear: both;
 }
 
 form {
@@ -99,4 +100,38 @@ form {
 }
 label {
 	display: block;
+}
+
+@media all and (max-width: 480px) {
+	.centered {
+		width: 320px;
+		margin-left: -160px;
+	}
+
+	.tags {
+		width: 300px;
+	}
+
+	video {
+		height: 320px;
+	}
+}
+
+@media all and (max-width: 320px) {
+	.centered {
+		width: 250px;
+		margin-left: -125px;
+	}
+
+	.add {
+		display: none;
+	}
+
+	.tags {
+		width: 230px;
+	}
+
+	video {
+		height: 250px;
+	}
 }

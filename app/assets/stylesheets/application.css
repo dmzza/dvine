@@ -3,7 +3,7 @@ body {
 	font-weight: 400;
 	padding: 0;
 	margin: 0;
-	background-color: #FCFCFC;
+	background-color: #F9F9F9;
 }
 
 .centered {
@@ -16,6 +16,13 @@ body {
 
 .header {
 
+}
+
+.footer {
+	border-top: 4px #F9F9F9 solid;
+	margin-top:-40px;
+	padding: 25px 0;
+	width: 100%;
 }
 
 .background {
@@ -62,7 +69,7 @@ a:hover {
 .video {
 	margin: 40px 0;
 	padding-bottom: 35px;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 4px solid #F9F9F9;
 	width: 100%;
 }
 
@@ -75,8 +82,8 @@ a:hover {
 }
 .tags img {
 	position: absolute;
-	right: 5px;
-	bottom: 7px;
+	right: 8px;
+	bottom: 9px;
 }
 
 video {
@@ -88,6 +95,7 @@ video {
 
 form {
 	clear: both;
+	margin-bottom: 100px;
 }
 label {
 	display: block;

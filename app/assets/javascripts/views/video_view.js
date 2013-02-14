@@ -6,7 +6,7 @@ Vine.VideoBoxView = Ember.View.extend({
 		});
 		this.$("video")[0].play();
 	},
-	touchStart: function(e) {
+	touchEnd: function(e) {
 		videos = document.getElementsByTagName("video");
 		$.each(videos, function(i, v) {
 			v.pause();

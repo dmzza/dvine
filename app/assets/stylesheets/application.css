@@ -3,6 +3,7 @@ body {
 	font-weight: 400;
 	padding: 0;
 	margin: 0;
+	background-color: #FCFCFC;
 }
 
 .centered {
@@ -10,10 +11,23 @@ body {
 	position: relative;
 	left: 50%;
 	margin-left: -240px;
+	display: block;
 }
 
 .header {
 
+}
+
+.background {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	width: 620px;
+	left: 50%;
+	margin-left: -310px;
+	display: block;
+	background-color: #FFF;
 }
 
 h1 {

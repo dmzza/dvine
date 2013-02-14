@@ -7,6 +7,18 @@ class VideosController < ActionController::API
     render json: @videos
   end
 
+  # GET /tags/name.json
+  def search
+
+    @videos = Video.find(:all, :conditions => ["caption like ?", "%\##{params[:name]}%"])
+    @tag = {
+      name: params[:name],
+      videos: @videos
+    }
+
+    render json: @tag
+  end
+
   # GET /videos/1.json
   def show
     @video = Video.find(params[:id])

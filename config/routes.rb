@@ -15,6 +15,8 @@ Vine::Application.routes.draw do
 
   resources :videos
 
+  match 'tags/:name' => 'videos#search'
+
   # Sample resource route with options:
   #   resources :products do
   #     member do

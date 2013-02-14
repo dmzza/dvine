@@ -1,6 +1,7 @@
 Vine.Video = DS.Model.extend({
     url: DS.attr('string'),
     caption: DS.attr('string'),
+    createdAt: DS.attr('date'),
     tags: function() {
     	tags = [];
     	caption = this.get('caption');

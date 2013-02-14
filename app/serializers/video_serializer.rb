@@ -1,5 +1,5 @@
 class VideoSerializer < ActiveModel::Serializer
-	attributes :id, :url, :caption
+	attributes :id, :url, :caption, :created_at
 
 	def url
 		video.url
@@ -7,5 +7,9 @@ class VideoSerializer < ActiveModel::Serializer
 
 	def caption
 		video.caption
+	end
+
+	def created_at
+		video.created_at
 	end
 end

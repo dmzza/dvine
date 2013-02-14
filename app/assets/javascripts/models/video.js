@@ -8,9 +8,11 @@ Vine.Video = DS.Model.extend({
     	if(caption != null) {
     		parsed = caption.split("#");
 	    	$.each(parsed, function(i, tag) {
-	    		tagName = tag.split(" ")[0];
-	    		if(tagName.length > 0)
-	    			tags.push("#" + tagName);
+	    		if(i>0) {
+		    		tagName = tag.split(" ")[0];
+		    		if(tagName.length > 0)
+		    			tags.push("#" + tagName);
+		    	}
 	    	});
     	}
     	

@@ -4,9 +4,13 @@
 		<video loop preload="auto" class="centered" {{bindAttr src="video.url"}}></video>
 		
 		<div class="centered tags">
-			{{#each tag in video.tags}}
-				<a href="{{unbound tag}}"> {{tag}} </a>
-			{{/each}}
+			{{#if video.tags}}
+				{{#each tag in video.tags}}
+					<a href="{{unbound tag}}"> {{tag}} </a>
+				{{/each}}
+			{{else}}
+				{{video.caption}}
+			{{/if}}
 			{{#linkTo "video" video}}<img src="assets/glyphicons_223_chevron-right.png" />{{/linkTo}}
 		</div>
 	</div>

@@ -6,6 +6,7 @@ class VideosController < ActionController::API
       @videos = Video.find(:all, :conditions => ["caption like ?", "%\##{params[:tag]}%"])
       render json: @videos
       Thread.new do
+        logger.info "new thread for #{params[:tag]}"
         Video.get_videos_by_tag(params[:tag])
       end
     else

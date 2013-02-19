@@ -12,6 +12,8 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'ember-rails', :git => "git://github.com/emberjs/ember-rails.git", :ref => "587a5"
 
+gem 'faraday'
+
 group :assets do
   gem 'therubyracer'
   gem 'sass-rails'

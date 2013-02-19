@@ -102,6 +102,11 @@ label {
 	display: block;
 }
 
+.error {
+	height: 300px;
+	clear: both;
+}
+
 @media all and (max-width: 480px) {
 	.centered {
 		width: 320px;

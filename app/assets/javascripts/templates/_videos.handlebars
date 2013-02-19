@@ -1,3 +1,12 @@
+{{#unless arrangedContent.length}}
+	<div class="centered error">
+		<h3>Hold it right there</h3>
+		<p>
+			Looks like you stumbled upon a new tag. <br /><br />
+			Wait for a moment while we search for this tag. Refresh see if we found anything.
+		</p>
+	</div>
+{{/unless}}
 {{#each video in arrangedContent}}
 	{{#view Vine.VideoBoxView}}
 	<div class="video">

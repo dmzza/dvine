@@ -28,17 +28,9 @@ Vine.VideosNewRoute = Ember.Route.extend({
 Vine.VideosTagRoute = Ember.Route.extend({
 	model: function(params) {
 		this.set('tag', params.name);
-		videos = Vine.Video.find();
+		videos = Vine.Video.find({ tag: params.name });
 
-		return videos.filter(function(video, i, list) {
-				caption = video.get('caption')
-				if(caption != null && caption.indexOf('#' + params.name) != -1) {
-					return true;
-				} else {
-					return false;
-				}
-				
-			});
+		return videos;
 	},
 	setupController: function(controller, model) {
 		controller.set('content', model);

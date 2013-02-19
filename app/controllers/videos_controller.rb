@@ -2,9 +2,17 @@ class VideosController < ActionController::API
 	
 	# GET /videos.json
   def index
-    @videos = Video.find(:all)
-
-    render json: @videos
+    if params.has_key?("tag")
+      @videos = Video.find(:all, :conditions => ["caption like ?", "%\##{params[:tag]}%"])
+      render json: @videos
+      Thread.new do
+        Video.get_videos_by_tag(params[:tag])
+      end
+    else
+      @videos = Video.find(:all, :order => "created_at DESC", :limit => 50)
+      render json: @videos
+    end
+    
   end
 
   # GET /videos/1.json

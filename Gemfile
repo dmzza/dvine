@@ -15,7 +15,7 @@ gem 'ember-rails', :git => "git://github.com/emberjs/ember-rails.git", :ref => "
 gem 'faraday'
 
 gem 'delayed_job_active_record'
-gem 'hirefire'
+gem "workless", "~> 1.1.1"
 
 group :assets do
   gem 'therubyracer'

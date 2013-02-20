@@ -5,10 +5,7 @@ class VideosController < ActionController::API
     if params.has_key?("tag")
       @videos = Video.find(:all, :conditions => ["caption like ?", "%\##{params[:tag]}%"])
       render json: @videos
-      Thread.new do
-        logger.info "new thread for #{params[:tag]}"
-        Video.get_videos_by_tag(params[:tag])
-      end
+      Video.get_videos_by_tag(params[:tag])
     else
       @videos = Video.find(:all, :order => "created_at DESC", :limit => 50)
       render json: @videos

@@ -55,6 +55,6 @@ class Video < ActiveRecord::Base
 			end
 		end
 		
-	    handle_asynchronously :get_videos_by_tag
+	    # handle_asynchronously :get_videos_by_tag
 	end
 end

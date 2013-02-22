@@ -6,7 +6,7 @@ class Video < ActiveRecord::Base
 		def authenticate_vine
 			username = ENV['VINE_USERNAME']
 			password = ENV['VINE_PASSWORD']
-			connection = Faraday::Connection.new 'https://api.vineapp.com', :ssl => { :verify => OpenSSL::SSL::VERIFY_PEER, :ca_file => '/usr/lib/ssl/certs/ca-certificates.crt' }
+			connection = Faraday::Connection.new 'https://api.vineapp.com', :ssl => { :verify => OpenSSL::SSL::VERIFY_NONE, :ca_file => '/usr/lib/ssl/certs/ca-certificates.crt' }
 			response = connection.post '/users/authenticate', :username => username, :password => password 
 			res = ActiveSupport::JSON.decode(response.body)
 			logger.info res
@@ -14,7 +14,7 @@ class Video < ActiveRecord::Base
 		end
 
 		def search_vine(tag, session)
-			connection = Faraday::Connection.new 'https://api.vineapp.com', :ssl => { :verify => OpenSSL::SSL::VERIFY_PEER, :ca_file => '/usr/lib/ssl/certs/ca-certificates.crt' }
+			connection = Faraday::Connection.new 'https://api.vineapp.com', :ssl => { :verify => OpenSSL::SSL::VERIFY_NONE, :ca_file => '/usr/lib/ssl/certs/ca-certificates.crt' }
 			response = connection.get "/timelines/tags/#{tag}" do |request|
 				request.headers['user-agent'] = 'com.vine.iphone/1.0.3 (unknown, iPhone OS 6.1.0, iPhone, Scale/2.000000)'
 				request.headers['vine-session-id'] = session

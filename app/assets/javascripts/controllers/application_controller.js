@@ -13,5 +13,7 @@ Vine.ApplicationController = Ember.Controller.extend({
 
       _gaq.push(['_trackPageview', page]);
     }
+
+    $(window).scrollTop(0);
   }.observes('currentPath')
 });

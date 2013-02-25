@@ -11,6 +11,7 @@ gem 'pg'
 
 gem 'jquery-rails'
 gem 'ember-rails'
+gem "ember-source", "~> 1.0.0.rc1.0.0"
 
 gem 'faraday'
 
